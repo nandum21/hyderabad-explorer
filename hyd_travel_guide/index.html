@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hyderabad Explorer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <h1> Places Near Hyderabad</h1>
+  <p class="subtitle">Discover amazing destinations</p>
+</div>
+
+<div class="controls">
+  <input type="text" id="searchInput" placeholder="Search places..." class="search-box">
+  
+  <select id="categoryFilter" class="filter-select">
+    <option value="">All Categories</option>
+  </select>
+  
+  <select id="sortSelect" class="sort-select">
+    <option value="name">Sort by Name</option>
+    <option value="distance">Sort by Distance</option>
+  </select>
+
+  <button id="favoritesBtn" class="favorites-btn">Favorites</button>
+</div>
+
+<div id="places" class="places-grid"></div>
+
+<div id="emptyState" class="empty-state" style="display:none;">
+  <p>No places found. Try adjusting your filters.</p>
+</div>
+
+<!-- Modal for place details -->
+<div id="placeModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <div class="modal-body">
+      <img id="modalImage" src="" alt="Place image" class="modal-image">
+      <div class="modal-details">
+        <h2 id="modalName"></h2>
+        <p id="modalDescription" class="modal-description"></p>
+        
+        <div class="detail-section">
+          <h3>📍 Distance</h3>
+          <p id="modalDistance"></p>
+        </div>
+        
+        <div class="detail-section">
+          <h3>⏰ Best Time to Visit</h3>
+          <p id="modalBestTime"></p>
+        </div>
+        
+        <div class="detail-section">
+          <h3>🎯 Activities</h3>
+          <div id="modalActivities" class="activities-list"></div>
+        </div>
+        
+        <div class="detail-section">
+          <h3>🏢 Facilities</h3>
+          <div id="modalFacilities" class="facilities-list"></div>
+        </div>
+        
+        <div class="detail-section">
+          <h3>💪 Difficulty Level</h3>
+          <p id="modalDifficulty" class="difficulty-badge"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
