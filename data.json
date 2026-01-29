@@ -4,6 +4,11 @@
     "category": "Trekking",
     "distance": 120,
     "image": "images/anantagiri.jpg",
+    "gallery": [
+      "images/anantagiri.jpg",
+      "images/anantagiri1.jpg",
+      "images/anantagiri2.jpg"
+    ],
     "description": "A beautiful hill station perfect for nature lovers and adventure seekers. Known for its lush green forests, scenic viewpoints, and challenging trekking trails. The cool climate and fresh air make it an ideal destination for a weekend getaway.",
     "bestTime": "October to February",
     "activities": ["Trekking", "Photography", "Picnicking", "Nature walks"],
@@ -15,6 +20,11 @@
     "category": "Trekking",
     "distance": 50,
     "image": "images/bhongir.jpg",
+    "gallery": [
+      "images/bhongir.jpg",
+      "images/bhongir1.jpg",
+      "images/bhongir2.jpg"
+    ],
     "description": "A historic fort with a dramatic conical hill rising 120 meters. Offers spectacular panoramic views of the surrounding landscape. Perfect for history buffs and adventure enthusiasts. The fort has remnants of old structures and offers a moderately challenging trek.",
     "bestTime": "November to January",
     "activities": ["Fort exploration", "Trekking", "Photography", "Sunrise/Sunset viewing"],
@@ -22,4 +32,3 @@
     "difficulty": "Moderate"
   }
 ]
-

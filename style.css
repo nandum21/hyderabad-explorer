@@ -362,6 +362,10 @@ body {
   margin-bottom: 10px;
 }
 
+.detail-section h3 i {
+  margin-right: 10px;
+}
+
 .detail-section p {
   color: #b0a8d8;
   font-size: 1em;
@@ -418,10 +422,34 @@ body {
   }
 }
 
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.gallery-image:hover, .gallery-image.active {
+  border-color: #4ecdc4;
+  transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
   .modal-body {
     grid-template-columns: 1fr;
   }
+  
   
   .modal-content {
     padding: 20px;

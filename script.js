@@ -53,12 +53,14 @@ function renderPlaces(places) {
       </div>
     `;
     
+    card.addEventListener('click', () => openModal(place));
     card.querySelector('.favorite-btn').addEventListener('click', toggleFavorite);
     container.appendChild(card);
   });
 }
 
 function toggleFavorite(e) {
+  e.stopPropagation(); // Prevent modal from opening
   const button = e.currentTarget;
   const placeName = button.dataset.place;
   const icon = button.querySelector('i');
@@ -122,8 +124,9 @@ document.getElementById('favoritesBtn').addEventListener('click', () => {
 // Modal functions
 function openModal(place) {
   const modal = document.getElementById('placeModal');
+  const modalImage = document.getElementById('modalImage');
   
-  document.getElementById('modalImage').src = place.image;
+  modalImage.src = place.image;
   document.getElementById('modalName').textContent = place.name;
   document.getElementById('modalDescription').textContent = place.description || 'No description available.';
   document.getElementById('modalDistance').textContent = `${place.distance} KM away`;
@@ -154,6 +157,27 @@ function openModal(place) {
     });
   }
   
+  // Populate gallery
+  const galleryContainer = document.getElementById('modalGallery');
+  galleryContainer.innerHTML = '';
+  const images = place.gallery && place.gallery.length > 0 ? place.gallery : [place.image];
+  
+  images.forEach((imgSrc, idx) => {
+    const galleryImg = document.createElement('img');
+    galleryImg.src = imgSrc;
+    galleryImg.alt = place.name;
+    galleryImg.className = 'gallery-image';
+    if (idx === 0) galleryImg.classList.add('active');
+    
+    galleryImg.addEventListener('click', (e) => {
+      modalImage.src = e.target.src;
+      // Update active state in gallery
+      galleryContainer.querySelectorAll('.gallery-image').forEach(img => img.classList.remove('active'));
+      e.target.classList.add('active');
+    });
+    galleryContainer.appendChild(galleryImg);
+  });
+  
   modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 }
@@ -178,4 +202,3 @@ document.addEventListener('keydown', (e) => {
     closeModal();
   }
 });
-
