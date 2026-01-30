@@ -1,5 +1,35 @@
 [
   {
+    "name": "Osmania University",
+    "category": "Heritage / Campus Walk",
+    "distance": 1,
+    "image":"images/ou3.jpg",
+    "gallery": [
+        "images/ou1.jpg",
+        "images/ou2.jpg",
+        "images/ou3.jpg"
+    ],
+    "description": "Osmania University is one of the oldest and most prestigious universities in India, located in Hyderabad, Telangana. Established in 1918, the campus is well known for its grand Indo-Saracenic architecture, especially the iconic Arts College building. The vast green campus offers peaceful walking paths, historic structures, and a vibrant student atmosphere, making it a popular place for morning walks, photography, and heritage exploration.",
+    "bestTime": "Any time",
+    "activities": [
+      "Campus Walk",
+      "Photography",
+      "Picnicking",
+      "Nature Walks",
+      "Cycling"
+    ],
+    "facilities": [
+      "Food Stalls",
+      "Rest Areas",
+      "Parking",
+      "Public Transport Access",
+      "Cafeteria",
+      "Washrooms"
+    ],
+    "difficulty": "Easy"
+  },
+
+  {
     "name": "Anantagiri Hills",
     "category": "Trekking",
     "distance": 120,
